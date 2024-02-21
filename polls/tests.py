@@ -7,7 +7,7 @@ class ViewsTestCase(TestCase):
   def test_index_view(self):
     response = self.client.get(reverse('index'))
     self.assertEquals(response.status_code, 200)
-    self.assertContains(response, "Hello, world. This change will make the test fail")
+    self.assertContains(response, "Hello, world. You're at the polls index")
 
   def test_hello_view(self):
     response = self.client.get(reverse('hello'))
